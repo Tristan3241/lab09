@@ -27,26 +27,30 @@
      * @param value The int input value n.
      * @return The int output value n!.
      */
-    public int factorial(int value)
-    {
-        /*
-         * Here is the base case (ending condition): value == 1.
-         * This lets our recursion know when to stop.
-         */
-        //TODO
+  	 public static int factorial(int value)
+	    {
+	        /*
+	         * Here is the base case (ending condition): value == 1.
+	         * This lets our recursion know when to stop.
+	         */
+	        //TODO
+		if(value == 1) {
+		return value;
+		}
 
-
-        /*
-         * Here is the recursive statement. The function calls itself when the 
-         * base case is not met.
-         * Something is altered when the function makes a new call to itself. 
-         * In this case, the value is updated by decrementing by 1.
-         * 
-         * By doing this, we break up the equation n! into n! = n * (n-1)!.
-         */
-        //TODO
-
-    }
+	        /*
+	         * Here is the recursive statement. The function calls itself when the 
+	         * base case is not met.
+	         * Something is altered when the function makes a new call to itself. 
+	         * In this case, the value is updated by decrementing by 1.
+	         * 
+	         * By doing this, we break up the equation n! into n! = n * (n-1)!.
+	         */
+	        //TODO
+		int output = value * (value);
+		System.out.println(factorial(value-1));
+		return output;
+	    }
 
     /** **********************************************************************
      * Computes the nth fibonacci number.
