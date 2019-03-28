@@ -68,10 +68,19 @@
      * i.e. n==1 denotes that we should compute the 1st fibonacci number.
      * @return The value of the nth fibonacci number.
      */
-    public int fibonacci(int n)
-    {
-        //TODO
-    }
+      public static int fibonacci(int n)
+
+   {
+
+      if(n == 1)
+    	  return 1;
+      if (n==0)
+    	  return 0;
+      
+     
+      return fibonacci(n-1) + fibonacci(n-2);
+   }
+
 
     
     /** **********************************************************************
