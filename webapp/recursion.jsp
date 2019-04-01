@@ -47,8 +47,7 @@
 	         * By doing this, we break up the equation n! into n! = n * (n-1)!.
 	         */
 	        //TODO
-		int output = value * (value - 1);
-		return output;
+		return value * factorial(value - 1);
 	    }
 
     /** **********************************************************************
