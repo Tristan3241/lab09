@@ -27,7 +27,7 @@
      * @param value The int input value n.
      * @return The int output value n!.
      */
-  	 public static int factorial(int value)
+  	 public int factorial(int value)
 	    {
 	        /*
 	         * Here is the base case (ending condition): value == 1.
@@ -47,8 +47,7 @@
 	         * By doing this, we break up the equation n! into n! = n * (n-1)!.
 	         */
 	        //TODO
-		int output = value * (value);
-		System.out.println(factorial(value-1));
+		int output = value * (value - 1);
 		return output;
 	    }
 
@@ -68,7 +67,7 @@
      * i.e. n==1 denotes that we should compute the 1st fibonacci number.
      * @return The value of the nth fibonacci number.
      */
-      public static int fibonacci(int n)
+      public int fibonacci(int n)
 
    {
 
@@ -176,10 +175,26 @@
      * @param tree The subtree to sum over.
      * @return The sum of the values in the subtree.
      */
-    public int treeSum(Tree tree)
-    {
-    	//TODO
-    }
+   public int treeSum(Tree tree) {
+	int data;
+
+	if(tree.getChildren().size() != 0) {
+		
+		if(tree.getChildren().get(0).getChildren().size() != 0) {
+			data = tree.getChildren().get(0).getChildren().get(0).getValue();
+			
+			tree.getChildren().get(0).getChildren().remove(0);
+			return data + treeSum(tree);
+		}
+	 data = tree.getChildren().get(0).getValue();
+
+		tree.getChildren().remove(0);
+		return data + treeSum(tree);
+	}
+		
+	data = tree.getValue();
+	return data;
+}
     
     /** **********************************************************************
      * This function computes the area of a series of squares and circles. 
