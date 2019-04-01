@@ -110,7 +110,7 @@
     
         public Tree(int value)
         {
-    	    children = new ArrayList<>(value);
+    	    children = new ArrayList<>();
 	    this.value = value;
         }
     
