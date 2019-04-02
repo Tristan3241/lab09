@@ -156,15 +156,14 @@
      *        the subtree has no more children.
      * @return The size of the subtree - the number of nodes.
      */
-    public int nnaryTreeSize(int branchingFactor, int height)
-    {
-        if (height == 1) 
-        {
-    	    //TODO
-        }
-        
-    	//TODO
-    }
+   public int nnaryTreeSize(int branchingFactor, int height) {
+	int value;
+	if(height == 1) {
+		return 1;
+	}
+	value =(int) Math.pow(branchingFactor, height-1);
+	return (nnaryTreeSize(branchingFactor, height - 1) + value);
+}
 
     /** **********************************************************************
      * This function uses the Tree data structure defined above. This simply sums up the all
